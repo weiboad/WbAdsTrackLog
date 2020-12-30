@@ -1,5 +1,5 @@
 # WbAdsTrackLog
-SDK 具体使用方式请查看 demo 
+SDK 具体使用方式请查看： [Demo](https://github.com/weiboad/WbAdsTrackLog/blob/master/app/src/main/java/com/weibo/ads/MainActivity.java)
 
 ### 1. SDK 主要功能
 - 设备注册/激活
