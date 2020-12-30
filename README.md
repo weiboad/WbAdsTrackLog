@@ -90,7 +90,7 @@ WbReportHelper.onEventPurchase("66");
  public void onClick(final View v) {
     JSONObject paramsObj = new JSONObject();
      try {
-        paramsObj.put("video_title","Lady WEIBO"); //事件属性 视频标题 
+        paramsObj.put("video_title","WEIBO SDK"); //事件属性 视频标题
         paramsObj.put("duration",20); //事件属性 播放时⻓长 
     } catch (JSONException e) { 
         e.printStackTrace();

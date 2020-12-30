@@ -23,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
 
   }
 
+  /**
+   * OAID 获取监听
+   */
   public void getOAID(View view) {
     WbReportHelper.setOaidListener(new WbOaidHelper.OaidUpdaterListener() {
       @Override public void OnOaidAvalidListener(@NonNull String s) {
@@ -31,26 +34,41 @@ public class MainActivity extends AppCompatActivity {
     });
   }
 
+  /**
+   * 登录 行为 监听
+   */
   public void onClickLogin(View view) {
     WbReportHelper.onEventLogin();
   }
 
+  /**
+   * 注册 行为 监听
+   */
   public void onClickRegister(View view) {
     WbReportHelper.onEventRegister();
   }
 
+  /**
+   * 创建角色 行为 监听
+   */
   public void onClickCreateRole(View view) {
     WbReportHelper.onEventCreateRole();
   }
 
+  /**
+   * 付费 行为 监听
+   */
   public void onClickPurchase(View view) {
     WbReportHelper.onEventPurchase("666");
   }
 
+  /**
+   * 自定义 行为 监听
+   */
   public void onClickDefine(View view) {
     JSONObject paramsObj = new JSONObject();
     try {
-      paramsObj.put("video_title", "Lady Gaga on Oscar"); //事件属性 视频标题
+      paramsObj.put("video_title", "WEIBO SDK"); //事件属性 视频标题
       paramsObj.put("duration", 20); //事件属性 播放时⻓长
     } catch (JSONException e) {
       e.printStackTrace();
