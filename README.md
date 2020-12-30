@@ -1,4 +1,6 @@
 # WbAdsTrackLog
+SDK 具体使用方式请查看 demo 
+
 ### 1. SDK 主要功能
 - 设备注册/激活
 - 手动上报用户行为日志
