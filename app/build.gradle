@@ -45,8 +45,10 @@ dependencies {
 
   //  implementation project(path: ':weibosdk')
   // 引⼊依赖
-  implementation(name: 'WbAdsTrackLog-1.0.0', ext: 'aar')
+//  implementation(name: 'WbAdsTrackLog-1.0.0', ext: 'aar')
 
   implementation 'com.squareup.okhttp3:okhttp:4.9.0'
   implementation 'com.alibaba:fastjson:1.2.73'
+
+  implementation 'com.weiboad:WbAdsTrackLog:1.0.0'
 }
