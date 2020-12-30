@@ -43,10 +43,10 @@ dependencies {
   androidTestImplementation 'androidx.test.ext:junit:1.1.2'
   androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-  implementation project(path: ':weibosdk')
-  //    implementation files('libs/WbAdsRangersLog-release_1.0.0.aar')
+  //  implementation project(path: ':weibosdk')
+  //    implementation files('libs/WbAdsRangersLog-1.0.0.aar')
   // 引⼊依赖
-  //  implementation(name: 'WbAdsRangersLog-release_1.0.0', ext: 'aar')
+  implementation(name: 'WbAdsRangersLog-1.0.0', ext: 'aar')
 
   implementation 'com.squareup.okhttp3:okhttp:4.9.0'
   implementation 'com.alibaba:fastjson:1.2.73'
