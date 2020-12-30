@@ -30,7 +30,7 @@ android {
 
 repositories {
   flatDir {
-    dirs 'libs' //this way we can find the .aar file in libs folder
+    dirs 'libs'
   }
 }
 
@@ -44,9 +44,8 @@ dependencies {
   androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
   //  implementation project(path: ':weibosdk')
-  //    implementation files('libs/WbAdsRangersLog-1.0.0.aar')
   // 引⼊依赖
-  implementation(name: 'WbAdsRangersLog-1.0.0', ext: 'aar')
+  implementation(name: 'WbAdsTrackLog-1.0.0', ext: 'aar')
 
   implementation 'com.squareup.okhttp3:okhttp:4.9.0'
   implementation 'com.alibaba:fastjson:1.2.73'
