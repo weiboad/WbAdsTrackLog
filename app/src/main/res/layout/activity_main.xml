@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:layout_marginLeft="10dp"
+  android:layout_marginTop="30dp"
+  android:layout_marginRight="10dp"
+  android:layout_marginBottom="30dp"
+  android:orientation="vertical">
+
+  <Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginRight="10dp"
+    android:onClick="getOAID"
+    android:paddingLeft="3dp"
+    android:paddingRight="3dp"
+    android:text="获取 OAID"
+    android:textColor="#fff" />
+
+  <TextView
+    android:id="@+id/tv_oaid"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="30dp"
+    android:layout_marginRight="10dp"
+    android:text=""
+    android:textSize="14sp" />
+
+  <Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginRight="10dp"
+    android:onClick="onClickLogin"
+    android:paddingLeft="3dp"
+    android:paddingRight="3dp"
+    android:text="登录"
+    android:textColor="#fff" />
+
+  <Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginRight="10dp"
+    android:onClick="onClickRegister"
+    android:paddingLeft="3dp"
+    android:paddingRight="3dp"
+    android:text="注册"
+    android:textColor="#fff" />
+
+  <Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginRight="10dp"
+    android:onClick="onClickCreateRole"
+    android:paddingLeft="3dp"
+    android:paddingRight="3dp"
+    android:text="创建角色"
+    android:textColor="#fff" />
+
+  <Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginRight="10dp"
+    android:onClick="onClickPurchase"
+    android:paddingLeft="3dp"
+    android:paddingRight="3dp"
+    android:text="付费"
+    android:textColor="#fff" />
+
+  <Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginRight="10dp"
+    android:onClick="onClickDefine"
+    android:paddingLeft="3dp"
+    android:paddingRight="3dp"
+    android:text="自定义"
+    android:textColor="#fff" />
+
+</LinearLayout>

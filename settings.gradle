@@ -1,0 +1,3 @@
+include ':weibosdk'
+include ':app'
+rootProject.name = "weibo_ad_sdk"

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:layout_marginLeft="10dp"
+  android:layout_marginRight="10dp"
+  android:layout_marginBottom="30dp"
+  android:orientation="vertical">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:orientation="horizontal">
+
+    <Button
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="10dp"
+      android:layout_marginRight="10dp"
+      android:layout_weight="1"
+      android:onClick="onClickOpenHeart"
+      android:paddingLeft="3dp"
+      android:paddingRight="3dp"
+      android:text="开启心跳"
+      android:textColor="#fff" />
+
+    <Button
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="10dp"
+      android:layout_marginRight="10dp"
+      android:layout_weight="1"
+      android:onClick="onClickCloseHeart"
+      android:paddingLeft="3dp"
+      android:paddingRight="3dp"
+      android:text="关闭心跳"
+      android:textColor="#fff" />
+  </LinearLayout>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:orientation="horizontal">
+
+    <Button
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="10dp"
+      android:layout_marginRight="10dp"
+      android:layout_weight="1"
+      android:onClick="onClickJoinDebug"
+      android:paddingLeft="3dp"
+      android:paddingRight="3dp"
+      android:text="联调(false)"
+      android:textColor="#fff" />
+
+    <Button
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="10dp"
+      android:layout_marginRight="10dp"
+      android:layout_weight="1"
+      android:onClick="onClickUnJoinDebug"
+      android:paddingLeft="3dp"
+      android:paddingRight="3dp"
+      android:text="不联调(true)"
+      android:textColor="#fff" />
+  </LinearLayout>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="sdk_id：" />
+
+    <EditText
+      android:id="@+id/et_sdkid"
+      android:layout_width="0dp"
+      android:layout_height="40dp"
+      android:layout_weight="1" />
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="app_wm：" />
+
+    <EditText
+      android:id="@+id/et_app_wm"
+      android:layout_width="0dp"
+      android:layout_height="40dp"
+      android:layout_weight="1" />
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="测试地址：" />
+
+    <EditText
+      android:id="@+id/et_http"
+      android:layout_width="0dp"
+      android:layout_height="40dp"
+      android:layout_weight="1"
+      android:text="http://10.41.12.65:8000"/>
+
+  </LinearLayout>
+
+  <Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:onClick="onClickFinish"
+    android:text="配置完成"/>
+
+  <Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp"
+    android:onClick="getOAID"
+    android:paddingLeft="3dp"
+    android:paddingRight="3dp"
+    android:text="获取 OAID"
+    android:textColor="#fff" />
+
+  <TextView
+    android:id="@+id/tv_oaid"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="30dp"
+    android:layout_marginRight="10dp"
+    android:text=""
+    android:textSize="14sp" />
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:orientation="horizontal">
+
+    <Button
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="10dp"
+      android:layout_marginRight="10dp"
+      android:layout_weight="1"
+      android:onClick="onClickLogin"
+      android:paddingLeft="3dp"
+      android:paddingRight="3dp"
+      android:text="登录"
+      android:textColor="#fff" />
+
+    <Button
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="10dp"
+      android:layout_marginRight="10dp"
+      android:layout_weight="1"
+      android:onClick="onClickRegister"
+      android:paddingLeft="3dp"
+      android:paddingRight="3dp"
+      android:text="注册"
+      android:textColor="#fff" />
+
+    <Button
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="10dp"
+      android:layout_marginRight="10dp"
+      android:layout_weight="1"
+      android:onClick="onClickCreateRole"
+      android:paddingLeft="3dp"
+      android:paddingRight="3dp"
+      android:text="创建角色"
+      android:textColor="#fff" />
+  </LinearLayout>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:orientation="horizontal">
+
+    <Button
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="10dp"
+      android:layout_marginRight="10dp"
+      android:layout_weight="1"
+      android:onClick="onClickPurchase"
+      android:paddingLeft="3dp"
+      android:paddingRight="3dp"
+      android:text="付费"
+      android:textColor="#fff" />
+
+    <Button
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="10dp"
+      android:layout_marginRight="10dp"
+      android:layout_weight="1"
+      android:onClick="onClickDefine"
+      android:paddingLeft="3dp"
+      android:paddingRight="3dp"
+      android:text="自定义"
+      android:textColor="#fff" />
+
+  </LinearLayout>
+
+</LinearLayout>
