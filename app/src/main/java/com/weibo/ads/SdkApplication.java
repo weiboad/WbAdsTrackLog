@@ -3,14 +3,12 @@ package com.weibo.ads;
 import android.app.Application;
 import android.content.Context;
 import com.weibo.ads.sdk.WbConfigOptions;
-import com.weibo.ads.sdk.WbReportHelper;
 import com.weibo.ads.sdk.WbSDKHelper;
-import com.weibo.ads.sdk.manager.AppMonitorHelper;
 
 /**
  * @author : wuchao5
  * @date : 2020/11/30 15:34
- * @desciption :
+ * @desciption :Ø
  */
 public class SdkApplication extends Application {
 

@@ -12,7 +12,6 @@ import com.weibo.ads.sdk.WbConfigOptions;
 import com.weibo.ads.sdk.WbReportHelper;
 import com.weibo.ads.sdk.WbSDKHelper;
 import com.weibo.ads.sdk.oaid.helpers.WbOaidHelper;
-import com.weibo.ads.sdk.util.AppPrefsUtils;
 import java.lang.ref.WeakReference;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -100,7 +99,7 @@ public class TestActivity extends AppCompatActivity {
     String sdkid = et_sdkid.getText().toString();
     String appwm = et_app_wm.getText().toString();
     String http = et_http.getText().toString();
-    AppPrefsUtils.putString("url", http);
+    // AppPrefsUtils.putString("url", http);
     WbConfigOptions configOptions = new WbConfigOptions(sdkid, appwm)
         .setEnablePlay(isHeart)
         //是否联调，debug 版本时传入true；release 版本时，传入 true
