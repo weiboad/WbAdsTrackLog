@@ -6,7 +6,7 @@ SDK 具体使用方式请查看： [Demo](https://github.com/weiboad/WbAdsTrackL
 - 手动上报用户行为日志
 #### 2. 导入SDK
 ##### 2.1 手动导入
-在 Android Studio 中将 WbAdsTrackLog-1.0.0.aar 引入 libs 文件夹中,并将 aar 文件添加到相应的 build.gradle 文件中
+在 Android Studio 中将 WbAdsTrackLog-1.0.1.aar 引入 libs 文件夹中,并将 aar 文件添加到相应的 build.gradle 文件中
 
 - 将打包出来的 aar 文件加入到 libs 中
 
@@ -21,7 +21,7 @@ repositories {
 - 在 module 的 build.gradle 中的 dependencies 里加入:
 ```
 // 注意这里加入的名字没有后缀名
-implementation(name: 'WbAdsTrackLog-1.0.0', ext: 'aar')
+implementation(name: 'WbAdsTrackLog-1.0.1', ext: 'aar')
 ```
 
 - 由于需要网络请求及数据转换，SDK引入了如下三方依赖库：
@@ -36,13 +36,13 @@ implementation 'com.alibaba:fastjson:1.2.73'
 ```
 allprojects {
   repositories {
-    maven { url "https://raw.githubusercontent.com/weiboad/WbAdsTrackLog/master" }
+    maven { url "https://dl.bintray.com/weiboad/WbAdsTrackLog/" }
   }
 }
 ```
 在 app 文件夹下的 build.gradle 文件的 dependencies 中添加：
 ```
-implementation 'com.weiboad:WbAdsTrackLog:1.0.0'
+implementation 'com.weiboad:WbAdsTrackLog:1.0.1'
 ```
 
 #### 3. 初始化SDK
