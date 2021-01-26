@@ -23,6 +23,13 @@ repositories {
 // 注意这里加入的名字没有后缀名
 implementation(name: 'WbAdsTrackLog-1.0.0', ext: 'aar')
 ```
+
+- 由于需要网络请求及数据转换，SDK引入了如下三方依赖库：
+
+```
+implementation 'com.squareup.okhttp3:okhttp:4.9.0'
+implementation 'com.alibaba:fastjson:1.2.73'
+```
 ##### 2.2 远端引用
 
 在项目根目录下的 build.gradle 中添加：
