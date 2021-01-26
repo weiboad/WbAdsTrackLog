@@ -37,8 +37,8 @@ allprojects {
     //    jcenter { url 'http://jcenter.bintray.com' }
     //    maven { url 'http://maven.aliyun.com/nexus/content/repositories/google' }
     //    maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
-//    maven { url "https://raw.githubusercontent.com/weiboad/WbAdsTrackLog/master" }
-    maven { url "https://dl.bintray.com/weiboad/WbAdsTrackLog" }
+    maven { url "https://raw.githubusercontent.com/weiboad/WbAdsTrackLog/master" }
+//    maven { url "https://dl.bintray.com/weiboad/WbAdsTrackLog" }
   }
 }
 
