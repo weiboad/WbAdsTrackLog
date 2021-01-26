@@ -3,7 +3,9 @@ package com.weibo.ads;
 import android.app.Application;
 import android.content.Context;
 import com.weibo.ads.sdk.WbConfigOptions;
+import com.weibo.ads.sdk.WbReportHelper;
 import com.weibo.ads.sdk.WbSDKHelper;
+import com.weibo.ads.sdk.manager.AppMonitorHelper;
 
 /**
  * @author : wuchao5

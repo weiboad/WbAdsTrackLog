@@ -1,6 +1,8 @@
 package com.weibo.ads;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -10,6 +12,8 @@ import com.weibo.ads.sdk.WbConfigOptions;
 import com.weibo.ads.sdk.WbReportHelper;
 import com.weibo.ads.sdk.WbSDKHelper;
 import com.weibo.ads.sdk.oaid.helpers.WbOaidHelper;
+import com.weibo.ads.sdk.util.AppPrefsUtils;
+import java.lang.ref.WeakReference;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -22,6 +26,7 @@ public class TestActivity extends AppCompatActivity {
   private boolean isDebug;
   private boolean isHeart;
   private WbConfigOptions mWbConfigOptions;
+  private MyHandler handler;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -31,12 +36,17 @@ public class TestActivity extends AppCompatActivity {
     et_sdkid = findViewById(R.id.et_sdkid);
     et_app_wm = findViewById(R.id.et_app_wm);
     et_http = findViewById(R.id.et_http);
+    handler = new MyHandler(this);
   }
 
   public void getOAID(View view) {
     WbReportHelper.setOaidListener(new WbOaidHelper.OaidUpdaterListener() {
       @Override public void OnOaidAvalidListener(@NonNull String s) {
-        mTvOaid.setText(s);
+        // mTvOaid.setText(s);
+        Message msg = Message.obtain();
+        msg.what = 1;
+        msg.obj = s;
+        handler.sendMessage(msg);
       }
     });
   }
@@ -70,26 +80,10 @@ public class TestActivity extends AppCompatActivity {
 
   public void onClickOpenHeart(View view) {
     isHeart = true;
-   /* WbConfigOptions configOptions = new WbConfigOptions("123", "weibo")
-        .setEnablePlay(true)
-        //是否联调，debug 版本时传入true；release 版本时，传入 true
-        .setDebug(BuildConfig.DEBUG)
-        //是否在控制台输出日志，可用于观察用户行为日志上报情况，建议仅在调试时使用，release版本请设置为false ！
-        .setEnableLog(true);
-    WbSDKHelper.init(this, configOptions);
-    WbSDKHelper.startHeartBeatService();*/
   }
 
   public void onClickCloseHeart(View view) {
     isHeart = false;
-   /* WbConfigOptions configOptions = new WbConfigOptions("123", "weibo")
-        .setEnablePlay(false)
-        //是否联调，debug 版本时传入true；release 版本时，传入 true
-        .setDebug(BuildConfig.DEBUG)
-        //是否在控制台输出日志，可用于观察用户行为日志上报情况，建议仅在调试时使用，release版本请设置为false ！
-        .setEnableLog(true);
-    WbSDKHelper.init(this, configOptions);
-    WbSDKHelper.startHeartBeatService();*/
   }
 
   //联调 false
@@ -106,7 +100,7 @@ public class TestActivity extends AppCompatActivity {
     String sdkid = et_sdkid.getText().toString();
     String appwm = et_app_wm.getText().toString();
     String http = et_http.getText().toString();
-    // AppPrefsUtils.putString("url", http);
+    AppPrefsUtils.putString("url", http);
     WbConfigOptions configOptions = new WbConfigOptions(sdkid, appwm)
         .setEnablePlay(isHeart)
         //是否联调，debug 版本时传入true；release 版本时，传入 true
@@ -115,6 +109,34 @@ public class TestActivity extends AppCompatActivity {
         .setEnableLog(true);
 
     WbSDKHelper.init(SdkApplication.mContext.getApplicationContext(), configOptions);
+  }
 
+  private static class MyHandler extends Handler {
+    private WeakReference<TestActivity> activity;
+
+    private MyHandler(TestActivity activity) {
+      this.activity = new WeakReference<>(activity);
+    }
+
+    @Override
+    public void handleMessage(@NonNull Message msg) {
+      super.handleMessage(msg);
+      TestActivity mainActivity = activity.get();
+      if (mainActivity == null) {
+        return;
+      }
+      if (msg.what == -1) {
+        mainActivity.mTvOaid.setText(String.format("出错了：%s", msg.obj.toString()));
+      } else {
+        mainActivity.mTvOaid.setText(msg.obj.toString());
+      }
+    }
+
+  }
+
+  @Override
+  protected void onDestroy() {
+    handler.removeCallbacksAndMessages(null);
+    super.onDestroy();
   }
 }
